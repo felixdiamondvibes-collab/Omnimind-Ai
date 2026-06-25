@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Interface</title>
+    <style>
+        body { font-family: sans-serif; display: flex; flex-direction: column; height: 90vh; padding: 20px; }
+        #chat-box { flex-grow: 1; border: 1px solid #ccc; overflow-y: scroll; margin-bottom: 10px; padding: 10px; }
+    </style>
+</head>
+<body>
+    <div id="chat-box"></div>
+    <input type="text" id="user-input" placeholder="Ask anything...">
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        async function sendMessage() {
+            const input = document.getElementById('user-input');
+            const chatBox = document.getElementById('chat-box');
+            const userText = input.value;
+            
+            chatBox.innerHTML += `<p><b>You:</b> ${userText}</p>`;
+            
+            // NOTE: In a real app, you would send this to your own backend 
+            // where your database stores the user's history over years.
+            chatBox.innerHTML += `<p><b>AI:</b> (This requires a backend server to process and store your long-term memory.)</p>`;
+            
+            input.value = '';
+        }
+    </script>
+</body>
+</html>
