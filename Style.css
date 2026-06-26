@@ -1,0 +1,63 @@
+
+
+:root{
+–bg:#0f1724;
+–card:#0b1220;
+–muted:#9aa6b2;
+–accent:#4f46e5;
+–accent-2:#06b6d4;
+–text:#e6eef7;
+–success:#10b981;
+–danger:#ef4444;
+–radius:10px;
+font-family:Inter, system-ui, -apple-system, “Segoe UI”, Roboto, “Helvetica Neue”, Arial;
+color-scheme: dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+margin:0;
+background:linear-gradient(180deg,#071021 0%, #0b1220 100%);
+color:var(–text);
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+padding:24px;
+}
+.site-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:16px;
+margin-bottom:18px;
+}
+.brand h1{
+margin:0;
+font-size:1.35rem;
+letter-spacing:0.6px;
+}
+.tagline{margin:0;color:var(–muted);font-size:0.92rem}
+nav .btn{margin-left:8px;padding:10px 14px;border-radius:8px;border:0;background:transparent;color:var(–text);cursor:pointer}
+.btn.primary{background:linear-gradient(90deg,var(–accent),var(–accent-2));box-shadow:0 6px 18px rgba(79,70,229,0.18)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+main{display:grid;grid-template-columns:320px 1fr;gap:18px;align-items:start}
+.controls{background:rgba(255,255,255,0.02);padding:16px;border-radius:var(–radius);min-height:220px}
+.controls label{display:block;margin-top:12px;font-size:0.9rem;color:var(–muted)}
+.controls select, .controls input[type=“text”]{
+width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(–text)
+}
+.toggles{display:flex;gap:12px;margin-top:12px;align-items:center}
+.switch{display:flex;gap:8px;align-items:center}
+.live-area{background:rgba(255,255,255,0.02);padding:16px;border-radius:var(–radius)}
+.status-ok{color:var(–success)}
+.panels{display:flex;gap:12px;margin-top:12px}
+.panel{flex:1;background:linear-gradient(180deg,rgba(255,255,255,0.01),rgba(255,255,255,0.02));padding:12px;border-radius:8px;min-height:140px}
+.panel h3{margin-top:0;margin-bottom:8px;font-size:0.95rem}
+.text-box{font-size:1rem;line-height:1.4;color:var(–text);min-height:100px;overflow:auto}
+.history{margin-top:12px}
+.history ul{list-style:none;padding:0;margin:0;max-height:120px;overflow:auto}
+.history li{padding:8px;border-radius:8px;background:rgba(255,255,255,0.01);margin-bottom:8px}
+.help{grid-column:1 / -1;margin-top:12px;padding:12px;background:rgba(255,255,255,0.01);border-radius:8px}
+footer{text-align:center;margin-top:18px;color:var(–muted);font-size:0.85rem}
+@media(max-width:880px){
+main{grid-template-columns:1fr;gap:12px}
+            }
